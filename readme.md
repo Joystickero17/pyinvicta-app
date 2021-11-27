@@ -1,12 +1,12 @@
 ## solución al problema de plugins en Pyside2
 
-If you are running PyQt5 and PySide2, this solved the problem for me:
+Para solucionar un problema relacionado a la falta de plugin en __windows__, es necesario seguir los siguientes pasos:
 
-Copy the following files:
+* localizar y copiar los siguientes archivos en los directorios que se mencionan acontinuación:
 
-\Anaconda3\Lib\site-packages\PySide2\plugins\platforms\qminimal.dll
-\Anaconda3\Lib\site-packages\PySide2\plugins\platforms\qoffscreen.dll
-\Anaconda3\Lib\site-packages\PySide2\plugins\platforms\qwindows.dll
-to:
+  * \Anaconda3\Lib\site-packages\PySide2\plugins\platforms\qminimal.dll
+  * \Anaconda3\Lib\site-packages\PySide2\plugins\platforms\qoffscreen.dll
+  * \Anaconda3\Lib\site-packages\PySide2\plugins\platforms\qwindows.dll
 
-\Anaconda3\Library\plugins\platforms\
+* copiar a la siguiente ruta:
+  * \Anaconda3\Library\plugins\platforms\
