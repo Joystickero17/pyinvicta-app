@@ -1,16 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
-from PySide2.QtCore import QThread, Signal,Slot, QObject
-import time
+from PySide2.QtCore import QThread, Signal
 
 def get_price():
     # función para sacar los precios de la página del BCV
     response = requests.get("http://bcv.org.ve/")
-    print("cargando precio")
+    print("Cargando Precio")
     soup = BeautifulSoup(response.text, "html.parser")
     dolar_container =soup.find(id="dolar")
     dolar_price = dolar_container.find("strong")
-    return dolar_price.text.replace(",", ".")
+    return float(dolar_price.text.replace(",", "."))
 
 class HiloPrecio(QThread):
     precio_signal = Signal(str)
@@ -25,7 +24,6 @@ class HiloPrecio(QThread):
         self.precio_signal.emit("hello")
 
 
-        
 
 
 
