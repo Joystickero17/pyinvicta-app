@@ -1,4 +1,4 @@
-## solución al problema de plugins en Pyside2
+### Solución al problema de plugins en Pyside2
 
 Para solucionar un problema relacionado a la falta de plugin en __windows__, es necesario seguir los siguientes pasos:
 
