@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
         self._precio = float()
 
         # gif para loading
-        self.loading = QMovie("img/caracol.gif")
+        self.loading = QMovie("img/loading.gif")
 
         # colorear de blanco el fondo de la ventana
         self.setAutoFillBackground(True)
